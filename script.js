@@ -18,7 +18,6 @@ const CONFIG = {
   // Animation Timings
   ANIMATION_DELAY: 100,
   CARD_ANIMATION_DURATION: 600,
-  RIPPLE_DURATION: 600,
 
   // Breakpoints
   MOBILE_BREAKPOINT: 768,
@@ -34,7 +33,6 @@ const CONFIG = {
     mobileMenu: "#mobile-menu",
     mobileMenuLinks: ".mobile-menu-link",
     glassCards: ".glass-card",
-    clickEffects: ".click-effect",
     anchorLinks: 'a[href^="#"]',
     stars: ".stars",
   },
@@ -261,7 +259,6 @@ const Animations = {
    */
   init() {
     this.setupLoadingAnimations();
-    this.setupRippleEffects();
     this.setupParallaxEffect();
   },
 
@@ -287,47 +284,6 @@ const Animations = {
         }, index * CONFIG.ANIMATION_DELAY);
       });
     });
-  },
-
-  /**
-   * Setup click ripple effects
-   */
-  setupRippleEffects() {
-    const clickElements = Utils.getElements(CONFIG.SELECTORS.clickEffects);
-
-    clickElements.forEach((element) => {
-      element.addEventListener("click", (e) => this.createRipple(e, element));
-    });
-  },
-
-  /**
-   * Create ripple effect on click
-   * @param {Event} e - Click event
-   * @param {Element} element - Target element
-   */
-  createRipple(e, element) {
-    const ripple = document.createElement("div");
-    const rect = element.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const x = e.clientX - rect.left - size / 2;
-    const y = e.clientY - rect.top - size / 2;
-
-    // Style the ripple
-    ripple.style.width = `${size}px`;
-    ripple.style.height = `${size}px`;
-    ripple.style.left = `${x}px`;
-    ripple.style.top = `${y}px`;
-    ripple.classList.add("ripple");
-
-    // Add to element
-    element.appendChild(ripple);
-
-    // Remove after animation
-    setTimeout(() => {
-      if (ripple.parentNode) {
-        ripple.remove();
-      }
-    }, CONFIG.RIPPLE_DURATION);
   },
 
   /**

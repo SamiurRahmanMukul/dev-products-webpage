@@ -769,6 +769,9 @@ div {
   box-shadow: var(--shadow-glass-card);
   transition: all var(--transition-fast);
   cursor: default; /* Default cursor for cards */
+  height: auto;
+  min-height: auto;
+  overflow: hidden;
 }
 
 .glass-card:hover {
@@ -812,30 +815,6 @@ div {
   50% {
     opacity: 0.5;
   }
-}
-
-/* Click Effect */
-.click-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.click-effect::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: var(--border-radius-full);
-  transform: translate(-50%, -50%);
-  transition: width var(--transition-slow), height var(--transition-slow);
-}
-
-.click-effect:active::before {
-  width: 300px;
-  height: 300px;
 }
 
 /* ========================================
