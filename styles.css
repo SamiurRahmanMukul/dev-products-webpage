@@ -44,7 +44,7 @@
 
   /* === TYPOGRAPHY === */
   /* Font Families */
-  --font-family-primary: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-primary: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 
   /* Font Sizes */
   --font-size-xs: 0.75rem; /* 12px */
@@ -132,6 +132,24 @@
   box-sizing: border-box;
 }
 
+/* Prevent horizontal overflow on all elements */
+*,
+*::before,
+*::after {
+  max-width: 100vw;
+}
+
+/* Ensure animated elements stay within bounds */
+.star,
+.particle,
+.animated-dot,
+.rocket-trail,
+.shooting-star,
+.orbital-dot,
+.glowing-orb {
+  max-width: 100vw !important;
+}
+
 /* HTML & Body Setup */
 html,
 body {
@@ -140,19 +158,22 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   font-family: var(--font-family-primary);
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overflow-y: auto;
   scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 100vw !important;
 }
 
 /* ========================================
@@ -215,7 +236,9 @@ div {
 .stars-bg {
   background: linear-gradient(135deg, var(--color-bg-dark-1) 0%, var(--color-bg-dark-2) 50%, var(--color-bg-dark-3) 100%);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  max-width: 100vw !important;
 }
 
 .stars {
@@ -225,6 +248,8 @@ div {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  overflow: hidden;
+  max-width: 100vw;
 }
 
 /* Star Elements */
@@ -586,7 +611,7 @@ div {
     opacity: 1;
   }
   100% {
-    left: 110%;
+    left: 100vw;
     opacity: 0;
     transform: rotate(15deg);
   }
@@ -635,7 +660,7 @@ div {
     opacity: 1;
   }
   100% {
-    left: 120%;
+    left: 100vw;
     opacity: 0;
     transform: rotate(20deg) translateY(-50px);
   }
@@ -673,10 +698,10 @@ div {
 
 @keyframes orbit {
   0% {
-    transform: rotate(0deg) translateX(50px) rotate(0deg);
+    transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
@@ -1159,4 +1184,44 @@ div {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   ADDITIONAL RESPONSIVE FIXES
+   ======================================== */
+
+/* Extra small screens - reduce animation distances */
+@media (max-width: 480px) {
+  .orbital-dot {
+    animation: orbit-mobile 15s infinite linear;
+  }
+
+  @keyframes orbit-mobile {
+    0% {
+      transform: rotate(0deg) translateX(20px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(20px) rotate(-360deg);
+    }
+  }
+
+  /* Reduce rocket trail sizes on mobile */
+  .rocket-trail {
+    max-width: 30px !important;
+  }
+
+  .shooting-star {
+    max-width: 50px !important;
+  }
+}
+
+/* Ensure no element can cause horizontal scroll */
+@media (max-width: 768px) {
+  body,
+  html,
+  .stars-bg,
+  .stars {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
 }

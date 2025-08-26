@@ -1,6 +1,6 @@
 /**
  * ========================================
- * PRODUCT WEBPAGE - MAIN JAVASCRIPT
+ * DEV PRODUCTS WEBPAGE - MAIN JAVASCRIPT
  * ========================================
  *
  * Organized JavaScript modules for:
@@ -517,9 +517,9 @@ const App = {
       Navigation.init();
       Performance.init();
 
-      console.log("✅ Product Webpage initialized successfully");
+      console.log("✅ Dev Products Webpage initialized successfully.");
     } catch (error) {
-      console.error("❌ Failed to initialize Product Webpage:", error);
+      console.error("❌ Failed to initialize Dev Products Webpage:", error);
     }
   },
 };
