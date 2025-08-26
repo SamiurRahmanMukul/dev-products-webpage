@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Showcase - Extensions & Packages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="stars-bg text-white">
+    <!-- Main Content Wrapper -->
+    <div class="flex-1">
+      <!-- Animated Background -->
+      <div class="stars">
+        <!-- Stars (20 total) -->
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+
+        <!-- Floating Particles (10 total) -->
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+
+        <!-- Animated Dots (5 total) -->
+        <div class="animated-dot"></div>
+        <div class="animated-dot"></div>
+        <div class="animated-dot"></div>
+        <div class="animated-dot"></div>
+        <div class="animated-dot"></div>
+
+        <!-- Rocket Trails (3 total) -->
+        <div class="rocket-trail"></div>
+        <div class="rocket-trail"></div>
+        <div class="rocket-trail"></div>
+
+        <!-- Shooting Stars (3 total) -->
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+
+        <!-- Orbital Dots (3 total) -->
+        <div class="orbital-dot"></div>
+        <div class="orbital-dot"></div>
+        <div class="orbital-dot"></div>
+
+        <!-- Glowing Orbs (3 total) -->
+        <div class="glowing-orb"></div>
+        <div class="glowing-orb"></div>
+        <div class="glowing-orb"></div>
+      </div>
+
+      <!-- Sticky Header -->
+      <header class="fixed top-0 left-0 right-0 z-50 glass">
+        <nav class="container mx-auto px-4 sm:px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="text-xl sm:text-2xl font-bold gradient-text"><i class="fas fa-code mr-2"></i>DevProducts</div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+              <a href="#products" class="hover:text-purple-400 transition-colors duration-300 text-sm lg:text-base">Extensions</a>
+              <a href="#products" class="hover:text-purple-400 transition-colors duration-300 text-sm lg:text-base">Packages</a>
+              <a href="#about" class="hover:text-purple-400 transition-colors duration-300 text-sm lg:text-base">About</a>
+              <a href="#contact" class="hover:text-purple-400 transition-colors duration-300 text-sm lg:text-base">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+              <button id="mobile-menu-button" class="hamburger text-white hover:text-purple-400 transition-colors duration-300">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="mobile-menu md:hidden">
+            <div class="mobile-menu-content space-y-8 px-8">
+              <!-- Close Button -->
+              <div class="absolute top-6 right-6 z-20">
+                <button id="mobile-menu-close" class="close-button w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-red-400 transition-all duration-300 hover:scale-110">
+                  <i class="fas fa-times text-xl"></i>
+                </button>
+              </div>
+
+              <div class="text-center mb-8">
+                <div class="text-3xl font-bold gradient-text mb-2">
+                  <i class="fas fa-code mr-3 text-white"></i>
+                  <span class="text-white">DevProducts</span>
+                </div>
+                <p class="text-gray-300 text-sm">Developer Tools & Extensions</p>
+              </div>
+
+              <div class="menu-container glass rounded-2xl p-6 w-full max-w-sm">
+                <div class="flex flex-col items-center space-y-3 w-full">
+                  <a href="#products" class="mobile-menu-link w-full text-center py-4 px-6 text-lg font-semibold rounded-xl transition-all duration-300"> <i class="fas fa-box-open mr-3"></i>Extensions </a>
+                  <a href="#products" class="mobile-menu-link w-full text-center py-4 px-6 text-lg font-semibold rounded-xl transition-all duration-300"> <i class="fab fa-npm mr-3"></i>Packages </a>
+                  <a href="#about" class="mobile-menu-link w-full text-center py-4 px-6 text-lg font-semibold rounded-xl transition-all duration-300"> <i class="fas fa-info-circle mr-3"></i>About </a>
+                  <a href="#contact" class="mobile-menu-link w-full text-center py-4 px-6 text-lg font-semibold rounded-xl transition-all duration-300"> <i class="fas fa-envelope mr-3"></i>Contact </a>
+                </div>
+              </div>
+
+              <div class="social-container glass rounded-xl p-4 mt-8">
+                <div class="flex space-x-6 justify-center">
+                  <a href="#" class="text-white hover:text-purple-400 transition-colors duration-300 transform hover:scale-110">
+                    <i class="fab fa-github text-2xl"></i>
+                  </a>
+                  <a href="#" class="text-white hover:text-purple-400 transition-colors duration-300 transform hover:scale-110">
+                    <i class="fab fa-twitter text-2xl"></i>
+                  </a>
+                  <a href="#" class="text-white hover:text-purple-400 transition-colors duration-300 transform hover:scale-110">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 hero-padding-mobile">
+        <div class="container mx-auto text-center container-mobile">
+          <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 loading-pulse">
+            <span class="gradient-text">Developer</span>
+            <span class="gradient-text-alt">Products</span>
+          </h1>
+          <p class="hero-subtitle text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto px-2">Discover powerful extensions and packages that enhance your development workflow</p>
+          <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
+            <span class="glass px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium"> <i class="fab fa-chrome mr-1 sm:mr-2"></i>Chrome Extensions </span>
+            <span class="glass px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium"> <i class="fas fa-code mr-1 sm:mr-2"></i>VS Code Extensions </span>
+            <span class="glass px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium"> <i class="fab fa-npm mr-1 sm:mr-2"></i>NPM Packages </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Grid -->
+      <section id="products" class="px-4 sm:px-6 pb-12 sm:pb-20 section-padding-mobile">
+        <div class="container mx-auto container-mobile">
+          <div class="masonry">
+            <!-- VS Code Extensions -->
+            <div class="masonry-item">
+              <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 click-effect cursor-pointer">
+                <div class="flex items-center mb-3 sm:mb-4">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4">
+                    <i class="fas fa-code text-white text-lg sm:text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="card-title text-lg sm:text-xl font-bold">Code Formatter Pro</h3>
+                    <p class="text-xs sm:text-sm text-gray-400">VS Code Extension</p>
+                  </div>
+                </div>
+                <p class="card-description text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Advanced code formatting with custom rules and multi-language support. Perfect for maintaining consistent code style across your projects.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="bg-blue-500/20 text-blue-300 px-2 sm:px-3 py-1 rounded-full text-xs">JavaScript</span>
+                  <span class="bg-green-500/20 text-green-300 px-2 sm:px-3 py-1 rounded-full text-xs">TypeScript</span>
+                  <span class="bg-purple-500/20 text-purple-300 px-2 sm:px-3 py-1 rounded-full text-xs">Python</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-yellow-400 text-sm sm:text-base">★★★★★ 4.8</span>
+                  <span class="text-gray-400 text-xs sm:text-sm">10K+ downloads</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="masonry-item">
+              <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 click-effect cursor-pointer">
+                <div class="flex items-center mb-3 sm:mb-4">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4">
+                    <i class="fas fa-palette text-white text-lg sm:text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="card-title text-lg sm:text-xl font-bold">Theme Studio</h3>
+                    <p class="text-xs sm:text-sm text-gray-400">VS Code Extension</p>
+                  </div>
+                </div>
+                <p class="card-description text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Create and customize beautiful themes for VS Code with real-time preview. Includes 50+ pre-built themes and advanced color picker tools.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="bg-pink-500/20 text-pink-300 px-2 sm:px-3 py-1 rounded-full text-xs">Themes</span>
+                  <span class="bg-orange-500/20 text-orange-300 px-2 sm:px-3 py-1 rounded-full text-xs">Customization</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-yellow-400 text-sm sm:text-base">★★★★☆ 4.6</span>
+                  <span class="text-gray-400 text-xs sm:text-sm">25K+ downloads</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chrome Extensions -->
+            <div class="masonry-item">
+              <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 click-effect cursor-pointer">
+                <div class="flex items-center mb-3 sm:mb-4">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4">
+                    <i class="fab fa-chrome text-white text-lg sm:text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="card-title text-lg sm:text-xl font-bold">ProductivityBoost</h3>
+                    <p class="text-xs sm:text-sm text-gray-400">Chrome Extension</p>
+                  </div>
+                </div>
+                <p class="card-description text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Block distracting websites, track time spent on different sites, and boost your productivity with smart notifications and focus modes. Includes detailed analytics and custom blocking rules.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="bg-red-500/20 text-red-300 px-2 sm:px-3 py-1 rounded-full text-xs">Productivity</span>
+                  <span class="bg-blue-500/20 text-blue-300 px-2 sm:px-3 py-1 rounded-full text-xs">Time Tracking</span>
+                  <span class="bg-yellow-500/20 text-yellow-300 px-2 sm:px-3 py-1 rounded-full text-xs">Focus</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-yellow-400 text-sm sm:text-base">★★★★★ 4.9</span>
+                  <span class="text-gray-400 text-xs sm:text-sm">100K+ users</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="masonry-item">
+              <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 click-effect cursor-pointer">
+                <div class="flex items-center mb-3 sm:mb-4">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4">
+                    <i class="fas fa-shield-alt text-white text-lg sm:text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="card-title text-lg sm:text-xl font-bold">SecurePass Manager</h3>
+                    <p class="text-xs sm:text-sm text-gray-400">Chrome Extension</p>
+                  </div>
+                </div>
+                <p class="card-description text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Advanced password manager with military-grade encryption, auto-fill capabilities, and secure password generation.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="bg-indigo-500/20 text-indigo-300 px-2 sm:px-3 py-1 rounded-full text-xs">Security</span>
+                  <span class="bg-gray-500/20 text-gray-300 px-2 sm:px-3 py-1 rounded-full text-xs">Encryption</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-yellow-400 text-sm sm:text-base">★★★★★ 4.7</span>
+                  <span class="text-gray-400 text-xs sm:text-sm">50K+ users</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- NPM Packages -->
+            <div class="masonry-item">
+              <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 click-effect cursor-pointer">
+                <div class="flex items-center mb-3 sm:mb-4">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4">
+                    <i class="fab fa-npm text-white text-lg sm:text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="card-title text-lg sm:text-xl font-bold">react-smooth-animations</h3>
+                    <p class="text-xs sm:text-sm text-gray-400">NPM Package</p>
+                  </div>
+                </div>
+                <p class="card-description text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Lightweight React animation library with 60+ pre-built animations, gesture support, and TypeScript definitions. Easy to use with minimal setup required.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="bg-cyan-500/20 text-cyan-300 px-2 sm:px-3 py-1 rounded-full text-xs">React</span>
+                  <span class="bg-purple-500/20 text-purple-300 px-2 sm:px-3 py-1 rounded-full text-xs">Animation</span>
+                  <span class="bg-blue-500/20 text-blue-300 px-2 sm:px-3 py-1 rounded-full text-xs">TypeScript</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-yellow-400 text-sm sm:text-base">★★★★☆ 4.5</span>
+                  <span class="text-gray-400 text-xs sm:text-sm">15K weekly downloads</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="masonry-item">
+              <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 click-effect cursor-pointer">
+                <div class="flex items-center mb-3 sm:mb-4">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-teal-500 to-green-600 rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4">
+                    <i class="fas fa-database text-white text-lg sm:text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="card-title text-lg sm:text-xl font-bold">data-validator-pro</h3>
+                    <p class="text-xs sm:text-sm text-gray-400">NPM Package</p>
+                  </div>
+                </div>
+                <p class="card-description text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Powerful data validation library with schema validation, custom rules, and async validation support.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="bg-green-500/20 text-green-300 px-2 sm:px-3 py-1 rounded-full text-xs">Validation</span>
+                  <span class="bg-teal-500/20 text-teal-300 px-2 sm:px-3 py-1 rounded-full text-xs">Schema</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-yellow-400 text-sm sm:text-base">★★★★★ 4.8</span>
+                  <span class="text-gray-400 text-xs sm:text-sm">8K weekly downloads</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="masonry-item">
+              <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 click-effect cursor-pointer">
+                <div class="flex items-center mb-3 sm:mb-4">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4">
+                    <i class="fas fa-chart-line text-white text-lg sm:text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="card-title text-lg sm:text-xl font-bold">analytics-tracker-lite</h3>
+                    <p class="text-xs sm:text-sm text-gray-400">NPM Package</p>
+                  </div>
+                </div>
+                <p class="card-description text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Lightweight analytics tracking solution with privacy-first approach, GDPR compliance, and real-time dashboard integration. Perfect for modern web applications.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="bg-purple-500/20 text-purple-300 px-2 sm:px-3 py-1 rounded-full text-xs">Analytics</span>
+                  <span class="bg-pink-500/20 text-pink-300 px-2 sm:px-3 py-1 rounded-full text-xs">Privacy</span>
+                  <span class="bg-indigo-500/20 text-indigo-300 px-2 sm:px-3 py-1 rounded-full text-xs">GDPR</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-yellow-400 text-sm sm:text-base">★★★★☆ 4.6</span>
+                  <span class="text-gray-400 text-xs sm:text-sm">12K weekly downloads</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="masonry-item">
+              <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 click-effect cursor-pointer">
+                <div class="flex items-center mb-3 sm:mb-4">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4">
+                    <i class="fas fa-rocket text-white text-lg sm:text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="card-title text-lg sm:text-xl font-bold">API Debugger Plus</h3>
+                    <p class="text-xs sm:text-sm text-gray-400">VS Code Extension</p>
+                  </div>
+                </div>
+                <p class="card-description text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Advanced API testing and debugging tool with request history, environment variables, and automated testing capabilities.</p>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="bg-orange-500/20 text-orange-300 px-2 sm:px-3 py-1 rounded-full text-xs">API</span>
+                  <span class="bg-red-500/20 text-red-300 px-2 sm:px-3 py-1 rounded-full text-xs">Testing</span>
+                  <span class="bg-yellow-500/20 text-yellow-300 px-2 sm:px-3 py-1 rounded-full text-xs">Debug</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-yellow-400 text-sm sm:text-base">★★★★★ 4.9</span>
+                  <span class="text-gray-400 text-xs sm:text-sm">35K+ downloads</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End Main Content Wrapper -->
+
+    <!-- Footer -->
+    <footer id="contact" class="glass mt-12 sm:mt-20">
+      <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12 container-mobile">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div class="col-span-1 sm:col-span-2 md:col-span-2">
+            <div class="text-xl sm:text-2xl font-bold gradient-text mb-3 sm:mb-4"><i class="fas fa-code mr-2"></i>DevProducts</div>
+            <p class="text-gray-400 mb-4 text-sm sm:text-base">Building tools that enhance developer productivity and streamline workflows. From VS Code extensions to Chrome add-ons and NPM packages.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <i class="fab fa-github text-lg sm:text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <i class="fab fa-twitter text-lg sm:text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <i class="fab fa-linkedin text-lg sm:text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <div id="about">
+            <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Products</h4>
+            <ul class="space-y-2 text-gray-400 text-sm sm:text-base">
+              <li><a href="#products" class="hover:text-white transition-colors duration-300">VS Code Extensions</a></li>
+              <li><a href="#products" class="hover:text-white transition-colors duration-300">Chrome Extensions</a></li>
+              <li><a href="#products" class="hover:text-white transition-colors duration-300">NPM Packages</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Support</h4>
+            <ul class="space-y-2 text-gray-400 text-sm sm:text-base">
+              <li><a href="#" class="hover:text-white transition-colors duration-300">Documentation</a></li>
+              <li><a href="#" class="hover:text-white transition-colors duration-300">Contact</a></li>
+              <li><a href="#" class="hover:text-white transition-colors duration-300">Bug Reports</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-6 sm:mt-8">
+          <div class="copyright-container">
+            <p class="copyright-text text-sm sm:text-base text-gray-400">&copy; 2024 DevProducts. All rights reserved. Built with ❤️ for developers.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
