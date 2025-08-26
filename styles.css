@@ -1243,6 +1243,7 @@ div:not(button):not(a) {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
   max-height: 6rem; /* Approximate height for 4 lines */
   transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-line-clamp 0.4s ease;
 }
@@ -1250,6 +1251,7 @@ div:not(button):not(a) {
 /* Hover state for line clamp expansion - TEXT ONLY */
 .line-clamp-4:hover {
   -webkit-line-clamp: unset;
+  line-clamp: unset;
   max-height: 15rem; /* Large enough for expanded content */
 }
 
