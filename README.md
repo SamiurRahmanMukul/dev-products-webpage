@@ -2,7 +2,7 @@
 
 A modern, responsive showcase website featuring developer tools, extensions, and packages with a stunning animated starry background and glass morphism design.
 
-![DevProducts Preview](assets/backspace-theme.gif)
+![DevProducts Preview](assets/website-screenshot.png)
 
 ## 🌟 Overview
 
@@ -59,7 +59,7 @@ DevProducts is a portfolio website that showcases various developer tools and ex
 ```bash
 dev-products-webpage/
 ├── assets/                 # Static assets
-│   ├── backspace-theme.gif # Theme preview animation
+│   ├── website-screenshot.png # Website preview screenshot
 │   ├── favicon.ico        # Website favicon
 │   └── npm-banner.webp    # NPM package banner
 ├── index.html             # Main HTML file
