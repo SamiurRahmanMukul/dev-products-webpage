@@ -768,6 +768,7 @@ div {
   border: 1px solid var(--color-glass-border);
   box-shadow: var(--shadow-glass-card);
   transition: all var(--transition-fast);
+  cursor: default; /* Default cursor for cards */
 }
 
 .glass-card:hover {
@@ -1219,6 +1220,86 @@ div {
   .hero-padding-mobile {
     padding-top: var(--spacing-4xl);
     padding-bottom: var(--spacing-2xl);
+  }
+}
+
+/* ========================================
+   CURSOR STYLES
+   ======================================== */
+
+/* Ensure proper cursor styles */
+button,
+a,
+.action-btn,
+.contact-btn,
+.mobile-menu-link,
+.close-button,
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer !important;
+}
+
+/* Default cursor for non-interactive elements */
+.glass-card,
+.card-title,
+.card-description,
+p,
+span,
+div:not(button):not(a) {
+  cursor: default;
+}
+
+/* ========================================
+   LINE CLAMP SMOOTH EFFECTS
+   ======================================== */
+
+/* Smooth Line Clamp Transitions */
+.card-description {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Enhanced line clamp with smooth height transition */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  max-height: 6rem; /* Approximate height for 4 lines */
+  transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-line-clamp 0.4s ease;
+}
+
+/* Hover state for line clamp expansion - TEXT ONLY */
+.line-clamp-4:hover {
+  -webkit-line-clamp: unset;
+  max-height: 15rem; /* Large enough for expanded content */
+}
+
+/* Fallback for browsers that don't support line-clamp */
+@supports not (-webkit-line-clamp: 4) {
+  .line-clamp-4 {
+    max-height: 6rem;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+
+  .line-clamp-4:hover {
+    max-height: 15rem;
+  }
+}
+
+/* Smooth opacity transition for better visual feedback - TEXT ONLY */
+.card-description:hover {
+  opacity: 1;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .line-clamp-4 {
+    max-height: 5.5rem; /* Slightly smaller on mobile */
+  }
+
+  .line-clamp-4:hover {
+    max-height: 12rem; /* Smaller expansion on mobile */
   }
 }
 
