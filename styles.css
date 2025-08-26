@@ -851,14 +851,10 @@ div {
 }
 
 /* Responsive Masonry */
-@media (min-width: 480px) {
-  .masonry {
-    column-count: 1;
-    column-gap: 1.25rem;
-  }
-}
+/* Mobile: 1 column (default, already set above) */
 
-@media (min-width: 640px) {
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
   .masonry {
     column-count: 2;
     column-gap: var(--spacing-lg);
@@ -868,6 +864,7 @@ div {
   }
 }
 
+/* Laptop: 3 columns */
 @media (min-width: 1024px) {
   .masonry {
     column-count: 3;
@@ -875,10 +872,69 @@ div {
   }
 }
 
-@media (min-width: 1280px) {
-  .masonry {
-    column-count: 4;
-    column-gap: var(--spacing-lg);
+/* ========================================
+   ACTION BUTTON STYLES
+   ======================================== */
+
+/* Action Button Base Styles */
+.action-btn {
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(var(--blur-sm));
+  -webkit-backdrop-filter: blur(var(--blur-sm));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: all var(--transition-fast);
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Action Button Ripple Effect */
+.action-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-full);
+  transform: translate(-50%, -50%);
+  transition: width var(--transition-normal), height var(--transition-normal);
+  pointer-events: none;
+}
+
+.action-btn:active::before {
+  width: 200px;
+  height: 200px;
+}
+
+/* Icon and Text Alignment */
+.action-btn i {
+  transition: transform var(--transition-fast);
+}
+
+.action-btn:hover i {
+  transform: scale(1.1);
+}
+
+/* Responsive Button Sizing */
+@media (max-width: 640px) {
+  .action-btn {
+    font-size: var(--font-size-xs);
+    padding: 0.5rem 0.75rem;
+  }
+
+  .action-btn i {
+    font-size: var(--font-size-sm);
   }
 }
 
