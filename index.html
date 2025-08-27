@@ -3,8 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevProducts - Product Showcase</title>
+    <title>DevProducts - Developer Tools, Extensions & NPM Packages by Mukul</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover powerful developer tools, VS Code extensions, Chrome extensions, and NPM packages by Md. Samiur Rahman (Mukul). Enhance your development workflow with carefully crafted tools." />
+    <meta name="keywords" content="developer tools, VS Code extensions, Chrome extensions, NPM packages, React hooks, development productivity, code editor themes, JavaScript, TypeScript, React.js, Next.js" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="en" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Author Meta Tags -->
+    <meta name="author" content="Md. Samiur Rahman (Mukul)" />
+    <meta name="creator" content="Md. Samiur Rahman (Mukul)" />
+    <meta name="publisher" content="Md. Samiur Rahman (Mukul)" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="DevProducts - Developer Tools & Extensions by Mukul" />
+    <meta property="og:description" content="Discover powerful developer tools, VS Code extensions, Chrome extensions, and NPM packages. Enhance your development workflow with carefully crafted tools." />
+    <meta property="og:image" content="assets/website-screenshot.png" />
+    <meta property="og:url" content="https://dev-products.srmukul.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DevProducts" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SamiurRahMukul" />
+    <meta name="twitter:creator" content="@SamiurRahMukul" />
+    <meta name="twitter:title" content="DevProducts - Developer Tools & Extensions by Mukul" />
+    <meta name="twitter:description" content="Discover powerful developer tools, VS Code extensions, Chrome extensions, and NPM packages. Enhance your development workflow." />
+    <meta name="twitter:image" content="assets/website-screenshot.png" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="msapplication-TileColor" content="#8b5cf6" />
+    <meta name="application-name" content="DevProducts" />
+    <meta name="apple-mobile-web-app-title" content="DevProducts" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dev-products.srmukul.com" />
+
+    <!-- Favicon and App Icons -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/favicon.ico" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "DevProducts",
+        "description": "Developer tools, VS Code extensions, Chrome extensions, and NPM packages by Md. Samiur Rahman (Mukul)",
+        "url": "https://dev-products.srmukul.com",
+        "author": {
+          "@type": "Person",
+          "name": "Md. Samiur Rahman (Mukul)",
+          "url": "https://srmukul.com",
+          "sameAs": ["https://github.com/SamiurRahmanMukul", "https://x.com/SamiurRahMukul", "https://www.linkedin.com/in/SamiurRahmanMukul"]
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Md. Samiur Rahman (Mukul)",
+          "url": "https://srmukul.com"
+        }
+      }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -199,10 +265,10 @@
 
                 <!-- Action Buttons -->
                 <div class="flex gap-2 sm:gap-3">
-                  <a href="https://github.com/SamiurRahmanMukul/backspace-vs-code-theme" target="_blank" class="action-btn flex-1 bg-gray-800/50 hover:bg-gray-700/70 border border-gray-600/50 hover:border-gray-500 text-white px-3 sm:px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm font-medium">
+                  <button disabled class="action-btn flex-1 bg-gray-600/30 border border-gray-500/30 text-gray-500 px-3 sm:px-4 py-2 rounded-lg cursor-not-allowed flex items-center justify-center gap-2 text-sm font-medium opacity-50">
                     <i class="fab fa-github text-base"></i>
                     <span>GitHub</span>
-                  </a>
+                  </button>
                   <a href="https://marketplace.visualstudio.com/items?itemName=SamiurRahmanMukul.backspace-theme" target="_blank" class="action-btn flex-1 bg-blue-600/50 hover:bg-blue-500/70 border border-blue-500/50 hover:border-blue-400 text-white px-3 sm:px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm font-medium">
                     <i class="fas fa-external-link-alt text-base"></i>
                     <span>View</span>
@@ -244,10 +310,10 @@
 
                 <!-- Action Buttons -->
                 <div class="flex gap-2 sm:gap-3">
-                  <a href="https://github.com/SamiurRahmanMukul/backspace-vs-code-theme" target="_blank" class="action-btn flex-1 bg-gray-800/50 hover:bg-gray-700/70 border border-gray-600/50 hover:border-gray-500 text-white px-3 sm:px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm font-medium">
+                  <button disabled class="action-btn flex-1 bg-gray-600/30 border border-gray-500/30 text-gray-500 px-3 sm:px-4 py-2 rounded-lg cursor-not-allowed flex items-center justify-center gap-2 text-sm font-medium opacity-50">
                     <i class="fab fa-github text-base"></i>
                     <span>GitHub</span>
-                  </a>
+                  </button>
                   <a href="https://open-vsx.org/extension/SamiurRahmanMukul/backspace-theme" target="_blank" class="action-btn flex-1 bg-cyan-600/50 hover:bg-cyan-500/70 border border-cyan-500/50 hover:border-cyan-400 text-white px-3 sm:px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm font-medium">
                     <i class="fas fa-external-link-alt text-base"></i>
                     <span>Open VSX</span>
@@ -307,7 +373,7 @@
     <!-- End Main Content Wrapper -->
 
     <!-- Footer -->
-    <footer id="contact" class="glass mt-12 sm:mt-20">
+    <footer id="contact" class="glass">
       <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12 container-mobile">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           <div class="col-span-1 sm:col-span-2 md:col-span-2">

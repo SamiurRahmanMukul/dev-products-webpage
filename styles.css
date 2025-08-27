@@ -1088,7 +1088,7 @@ div {
 .hamburger {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  cursor: pointer !important;
   padding: var(--spacing-xs);
 }
 
@@ -1099,6 +1099,7 @@ div {
   margin: 2px 0;
   transition: var(--transition-fast);
   border-radius: var(--border-radius-sm);
+  cursor: pointer !important;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -1392,4 +1393,76 @@ div:not(button):not(a) {
 /* Enhanced glow effect on hover */
 .contact-btn:hover {
   box-shadow: 0 0 20px rgba(147, 51, 234, 0.5), 0 0 40px rgba(59, 130, 246, 0.3);
+}
+
+/* Ensure all buttons and their children have proper cursor */
+button,
+.action-btn {
+  cursor: pointer !important;
+}
+
+button *,
+.action-btn * {
+  cursor: pointer !important;
+}
+
+/* Ensure disabled buttons have proper cursor */
+button:disabled,
+button[disabled] {
+  cursor: not-allowed !important;
+  pointer-events: auto !important;
+}
+
+button:disabled *,
+button[disabled] * {
+  cursor: not-allowed !important;
+}
+
+/* Prevent any hover effects on disabled buttons */
+button:disabled:hover,
+button[disabled]:hover {
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+button:disabled:hover *,
+button[disabled]:hover * {
+  cursor: not-allowed !important;
+}
+
+/* Ensure social icons have pointer cursor */
+a[href*="x.com"],
+a[href*="twitter.com"],
+a[href*="github.com"],
+a[href*="linkedin.com"] {
+  cursor: pointer !important;
+}
+
+a[href*="x.com"] *,
+a[href*="twitter.com"] *,
+a[href*="github.com"] *,
+a[href*="linkedin.com"] * {
+  cursor: pointer !important;
+}
+
+/* Ensure mobile menu close button has pointer cursor */
+.close-button,
+#mobile-menu-close {
+  cursor: pointer !important;
+}
+
+.close-button *,
+#mobile-menu-close * {
+  cursor: pointer !important;
+}
+
+/* Ensure hamburger menu button has pointer cursor */
+.hamburger,
+#mobile-menu-button {
+  cursor: pointer !important;
+}
+
+.hamburger *,
+#mobile-menu-button * {
+  cursor: pointer !important;
 }

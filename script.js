@@ -472,8 +472,6 @@ const App = {
       Animations.init();
       Navigation.init();
       Performance.init();
-
-      console.log("✅ Dev Products Webpage initialized successfully.");
     } catch (error) {
       console.error("❌ Failed to initialize Dev Products Webpage:", error);
     }
